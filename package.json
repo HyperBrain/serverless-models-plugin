@@ -1,0 +1,43 @@
+{
+  "name": "serverless-model-plugin",
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=4.0"
+  },
+  "description": "Serverless Model Plugin - Add support for AWS API Gateway models",
+  "author": "Frank Schmid",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HyperBrain/serverless-model-plugin"
+  },
+  "keywords": [
+    "serverless model plugin",
+    "serverless model",
+    "serverless framework plugin",
+    "serverless applications",
+    "serverless plugins",
+    "api gateway",
+    "api gateway models",
+    "lambda",
+    "aws",
+    "aws lambda",
+    "amazon",
+    "amazon web services",
+    "serverless.com"
+  ],
+  "main": "index.js",
+  "bin": {},
+  "scripts": {
+    "test": "mocha tests/all"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4"
+  },
+  "dependencies": {
+    "bluebird": "^3.1.1",
+    "lodash": "^4.0.0",
+    "fs-extra": "~0.26.7"
+  }
+}
