@@ -7,6 +7,9 @@
 module.exports = function(S) {
 
   const path       = require('path'),
+        SUtils     = S.utils,
+        SError     = require(S.getServerlessPath('Error')),
+        SCli       = require(S.getServerlessPath('utils/cli')),
         _          = require('lodash'),
         BbPromise  = require('bluebird');
 
@@ -22,7 +25,10 @@ module.exports = function(S) {
   ModelsRemove = new ModelsRemove();
   let ModelsImport = require('./lib/actions/ModelsImport')(S);
   ModelsImport = new ModelsImport();
+  let ModelsDeploy = require('./lib/actions/ModelsDeploy')(S);
+  ModelsDeploy = new ModelsDeploy();
 
+  // Create pseudo core objects
   S.classes.Models = require('./lib/Models')(S);
 
   /**
@@ -57,6 +63,7 @@ module.exports = function(S) {
           ModelsCreate.registerActions(),
           ModelsList.registerActions(),
           ModelsImport.registerActions(),
+          ModelsDeploy.registerActions(),
           ModelsRemove.registerActions()
           );
 
