@@ -63,7 +63,6 @@ module.exports = function(S) {
           ModelsCreate.registerActions(),
           ModelsList.registerActions(),
           ModelsImport.registerActions(),
-          ModelsDeploy.registerActions(),
           ModelsRemove.registerActions()
           );
 
@@ -75,7 +74,7 @@ module.exports = function(S) {
 
     registerHooks() {
 
-      S.addHook(this._buildModels.bind(this), {
+      S.addHook(ModelsDeploy.modelsDeploy.bind(ModelsDeploy), {
         action: 'endpointBuildApiGateway',
         event:  'pre'
       });
