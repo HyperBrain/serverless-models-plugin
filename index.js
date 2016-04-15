@@ -10,10 +10,18 @@ module.exports = function(S) {
         _          = require('lodash'),
         BbPromise  = require('bluebird');
 
+  /**
+   * Action instantiation. Used to resemble the SLS core layout to
+   * make it easy to integrate into core later.
+   */
   let ModelsCreate = require('./lib/actions/ModelsCreate')(S);
   ModelsCreate = new ModelsCreate();
   let ModelsList = require('./lib/actions/ModelsList')(S);
   ModelsList = new ModelsList();
+  let ModelsRemove = require('./lib/actions/ModelsRemove')(S);
+  ModelsRemove = new ModelsRemove();
+  let ModelsImport = require('./lib/actions/ModelsImport')(S);
+  ModelsImport = new ModelsImport();
 
   S.classes.Models = require('./lib/Models')(S);
 
@@ -47,7 +55,9 @@ module.exports = function(S) {
 
       return BbPromise.join(
           ModelsCreate.registerActions(),
-          ModelsList.registerActions()
+          ModelsList.registerActions(),
+          ModelsImport.registerActions(),
+          ModelsRemove.registerActions()
           );
 
     }
