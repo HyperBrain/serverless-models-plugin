@@ -9,7 +9,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/HyperBrain/serverless-model-plugin"
+    "url": "https://github.com/HyperBrain/serverless-models-plugin"
   },
   "keywords": [
     "serverless model plugin",
