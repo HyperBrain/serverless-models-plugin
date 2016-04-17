@@ -82,23 +82,6 @@ module.exports = function(S) {
       return BbPromise.resolve();
     }
 
-    /**
-     * Optimize
-     */
-
-    _buildModels(evt) {
-
-      // Validate: Check Serverless version
-      // TODO: Use a full x.x.x version string. Consider using semver: https://github.com/npm/node-semver
-      if (parseInt(S._version.split('.')[1]) < 5) {
-        console.log("WARNING: This version of the Serverless Model Plugin will not work with a version of Serverless that is less than v0.5");
-      }
-
-      // Get function
-      let endpoint = S.getProject().getEndpoint(evt.options.name);
-
-      return BbPromise.resolve(evt);
-    }
   }
 
   return ServerlessModel;
