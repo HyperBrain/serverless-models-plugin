@@ -21,6 +21,8 @@ module.exports = function(S) {
   ModelsCreate = new ModelsCreate();
   let ModelsList = require('./lib/actions/ModelsList')(S);
   ModelsList = new ModelsList();
+  let ModelsShow = require('./lib/actions/ModelsShow')(S);
+  ModelsShow = new ModelsShow();
   let ModelsRemove = require('./lib/actions/ModelsRemove')(S);
   ModelsRemove = new ModelsRemove();
   let ModelsImport = require('./lib/actions/ModelsImport')(S);
@@ -62,6 +64,7 @@ module.exports = function(S) {
       return BbPromise.join(
           ModelsCreate.registerActions(),
           ModelsList.registerActions(),
+          ModelsShow.registerActions(),
           ModelsImport.registerActions(),
           ModelsRemove.registerActions()
           );

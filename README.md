@@ -105,4 +105,8 @@ The plugin also adds some new commands to Serverless: `sls models XXXXXX`
 #### list
 Lists the defined model names
 
+#### show
+Shows specified model definitions as JSON or YAML.
+Usage: `sls models show <model names> [--format json|yaml]`
+
 #### more to come
