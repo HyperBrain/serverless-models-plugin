@@ -38,3 +38,6 @@ node_modules
 #SERVERLESS STUFF
 admin.env
 .env
+# Eclipse project
+.project
+.settings
