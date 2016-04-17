@@ -98,3 +98,11 @@ to add it to your `s-function.json` accordingly (see requestModels and responseM
   }
 }
 ```
+
+### Helper commands
+The plugin also adds some new commands to Serverless: `sls models XXXXXX`
+
+#### list
+Lists the defined model names
+
+#### more to come
