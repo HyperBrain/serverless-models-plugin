@@ -1,10 +1,10 @@
 {
-  "name": "serverless-model-plugin",
+  "name": "serverless-models-plugin",
   "version": "0.1.0",
   "engines": {
     "node": ">=4.0"
   },
-  "description": "Serverless Model Plugin - Add support for AWS API Gateway models",
+  "description": "Serverless Models Plugin - Add support for AWS API Gateway models",
   "author": "Frank Schmid",
   "license": "MIT",
   "repository": {
