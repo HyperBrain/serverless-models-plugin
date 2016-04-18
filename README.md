@@ -14,10 +14,24 @@ As soon as you reference them within your endpoint definitions and deploy the en
 models are uploaded to API Gateway. If the model already exists, the definition is updated.
 
 ## Installation
-`npm install serverless-models-plugin` will install the latest version of the plugin.
 
-If you want to debug, you also can reference the source repository at a specific version or branch
-with `npm install https://github.com/HyperBrain/serverless-models-plugin#<tag or branch name>`
+1. Install the plugin module
+   `npm install serverless-models-plugin` will install the latest version of the plugin.
+
+   If you want to debug, you also can reference the source repository at a specific version or branch
+   with `npm install https://github.com/HyperBrain/serverless-models-plugin#<tag or branch name>`
+
+2. Activate the plugin in your Serverless project
+   Add `serverless-models-plugin` to the plugins array in your `s-project.json`.
+   ```
+   {
+     "name": "testp1",
+     "custom": {},
+     "plugins": [
+       "serverless-models-plugin"
+     ]
+   }
+   ```
 
 ## Usage
 ### Model definition
