@@ -36,6 +36,26 @@ myModelTwo:
     type: string
 ```
 
+#### Model references
+Models can reference other models. You can do this easily by adding `$ref` properties that
+refer to another defined model. The plugin will take care of including and deploying referenced
+models properly.
+
+_Example_
+```
+myModelOne:
+  type: object
+  properties:
+    myProp:
+      type: string
+    myProp2:
+      type: number
+myModelTwo:
+  type: array
+  items:
+    $ref: myModelOne
+```
+
 ### Using models in endpoints
 If you want to declare a response (output) or request (input) model for an endpoint, you just have 
 to add it to your `s-function.json` accordingly (see requestModels and responseModels properties):
