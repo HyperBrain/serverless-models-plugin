@@ -41,6 +41,7 @@ supported). Within this file define your models.
 _Example (YAML)_
 ```
 myModelOne:
+  '$schema': 'http://json-schema.org/draft-04/schema#'
   type: object
   properties:
     myProp:
@@ -48,9 +49,35 @@ myModelOne:
     myProp2:
       type: number
 myModelTwo:
+  '$schema': 'http://json-schema.org/draft-04/schema#'
   type: array
   items:
     type: string
+```
+
+_Example (JSON)_
+```
+{
+  "myModelOne": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "myProp": {
+        "type": "string"
+      },
+      "myProp2": {
+        "type": "number"
+      }
+    }
+  },
+  "myModelTwo": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "array",
+    "items": {
+      "type": "string"
+    }
+  }
+}
 ```
 
 #### Model references
@@ -58,9 +85,10 @@ Models can reference other models. You can do this easily by adding `$ref` prope
 refer to another defined model. The plugin will take care of including and deploying referenced
 models properly.
 
-_Example_
+_Example (YAML)_
 ```
 myModelOne:
+  '$schema': 'http://json-schema.org/draft-04/schema#'
   type: object
   properties:
     myProp:
@@ -68,9 +96,35 @@ myModelOne:
     myProp2:
       type: number
 myModelTwo:
+  '$schema': 'http://json-schema.org/draft-04/schema#'
   type: array
   items:
     $ref: myModelOne
+```
+
+_Example (JSON)_
+```
+{
+  "myModelOne": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "myProp": {
+        "type": "string"
+      },
+      "myProp2": {
+        "type": "number"
+      }
+    }
+  },
+  "myModelTwo": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "array",
+    "items": {
+      "$ref": "myModelOne"
+    }
+  }
+}
 ```
 
 ### Using models in endpoints
