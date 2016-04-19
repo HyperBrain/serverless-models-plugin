@@ -1,5 +1,7 @@
 # serverless-models-plugin
 
+[![serverless](http://public.serverless.com/badges/v3.svg)](http://www.serverless.com)
+
 This plugin adds the missing model support to Serverless 0.5.x.
 
 ## Overview
