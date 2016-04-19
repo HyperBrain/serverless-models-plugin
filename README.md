@@ -203,3 +203,11 @@ Shows specified model definitions as JSON or YAML.
 Usage: `sls models show <model names> [--format json|yaml]`
 
 #### more to come
+
+## Releases
+
+### 1.0.0
+* Initial release
+
+### 1.0.1 (planned)
+* Documentation enhancements: #1, #2
