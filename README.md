@@ -209,5 +209,5 @@ Usage: `sls models show <model names> [--format json|yaml]`
 ### 1.0.0
 * Initial release
 
-### 1.0.1 (planned)
-* Documentation enhancements: #1, #2
+### 1.0.1
+* Documentation enhancements: issues #1, #2
