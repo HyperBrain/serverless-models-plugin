@@ -37,8 +37,17 @@ models are uploaded to API Gateway. If the model already exists, the definition 
 
 ## Usage
 ### Model definition
-Within your Serverless project root create a `s-models.json` or `s-models.yaml` (both formats are
-supported). Within this file define your models.
+Within anywhere of your Serverless project space you can create a `s-models.json` or `s-models.yaml` (both formats are
+supported). Within this files define your models ( you can $ref models between s-models files).
+
+```
+functions/
+└── function1
+    ├── event.json
+    ├── handler.js
+    ├── s-function.json
+    └── s-models.json
+```
 
 _Example (YAML)_
 ```
@@ -211,3 +220,7 @@ Usage: `sls models show <model names> [--format json|yaml]`
 
 ### 1.0.1
 * Documentation enhancements: issues #1, #2
+
+### 1.1.0
+* Documentation enhancements: issues #9
+* Added support for placing s-models within anywhere of the project's space
