@@ -215,6 +215,8 @@ Usage: `sls models show <model names> [--format json|yaml]`
 
 ## Releases
 
+### 1.1.0
+* s-models.[yaml|json] files are now used throughout the project hierarchy and merged on deploy.
 ### 1.0.0
 * Initial release
 
